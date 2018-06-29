@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Authenticator</h3>
+  <br>
+  <p>
+   Try to login
+  </p>
+  <hr>
+  <button ion-button secondary *ngIf="!auth.loggedIn" (click)="auth.login()">Login</button>
+  <button ion-button secondary *ngIf="auth.loggedIn" (click)="auth.login()">Logout</button>
+</ion-content>
